@@ -16,6 +16,7 @@ concurrency:
 
 jobs:
   deploy-wasm-github-pages:
+    if: github.repository_owner == 'ggml-org'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
